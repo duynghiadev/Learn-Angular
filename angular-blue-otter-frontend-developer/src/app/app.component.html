@@ -1,0 +1,27 @@
+<h1 class="font-bold">Blue Otter Frontend Developer Test</h1>
+<h3 class="font-bold">Instructions:</h3>
+<p>
+  Please push the completed code to an online repo of your choice and share it
+  with us.
+</p>
+
+<h3 class="font-bold">Test:</h3>
+<p>
+  Implement this image upload design using HTML, CSS, and Javascript. Instead of
+  uploading the images to a server, mock the upload request using a timeout.
+  Display the "uploaded" images below the upload form.
+</p>
+
+<app-upload-area
+  #uploadArea
+  *ngIf="isShowUploadArea"
+  (onClose)="hideUploadArea()"
+>
+</app-upload-area>
+<app-uploading-area
+  #uploadingArea
+  *ngIf="isShowUploadingArea"
+  (onClose)="hideUploadingArea()"
+  (onUploadMoreClicked)="uploadMore()"
+>
+</app-uploading-area>
