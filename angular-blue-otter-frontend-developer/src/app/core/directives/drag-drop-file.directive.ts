@@ -41,7 +41,7 @@ export class DragDirective {
       for (let i = 0; i < evt.dataTransfer.files.length; i++) {
         if (!this.isAllowedFileType(evt.dataTransfer.files[i].name)) {
           this.isError.emit();
-          return
+          return;
         }
 
         const file = evt.dataTransfer.files[i];
@@ -54,7 +54,6 @@ export class DragDirective {
         this.files.emit(files);
       }
     }
-
   }
 
   isAllowedFileType(fileName: string): boolean {

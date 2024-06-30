@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'fileSize'
+  name: 'fileSize',
 })
 export class FileSizePipe implements PipeTransform {
   transform(value: number): string {

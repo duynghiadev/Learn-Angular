@@ -1,14 +1,19 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { UploadItem } from '../../../core/models/upload-item.model';
 
 @Component({
   selector: 'app-upload-item',
   templateUrl: './upload-item.component.html',
-  styleUrl: './upload-item.component.scss'
+  styleUrl: './upload-item.component.scss',
 })
 export class UploadItemComponent {
-
-  @Output() uploaded: EventEmitter<void> = new EventEmitter<void>;
+  @Output() uploaded: EventEmitter<void> = new EventEmitter<void>();
   _file: UploadItem;
   get file(): UploadItem {
     return this._file;

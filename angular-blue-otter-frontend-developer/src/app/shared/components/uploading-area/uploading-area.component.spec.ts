@@ -8,10 +8,9 @@ describe('UploadingAreaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UploadingAreaComponent]
-    })
-    .compileComponents();
-    
+      declarations: [UploadingAreaComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(UploadingAreaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -10,31 +10,18 @@ import { UploadAreaComponent } from './shared/components/upload-area/upload-area
 import { UploadingAreaComponent } from './shared/components/uploading-area/uploading-area.component';
 import { FileSizePipe } from './core/pipes/file-size.pipe';
 
+const directive = [DragDirective];
 
-const directive = [
-  DragDirective
-];
-
-const pipes = [
-  FileSizePipe
-]
+const pipes = [FileSizePipe];
 const components = [
   UploadItemComponent,
   UploadAreaComponent,
-  UploadingAreaComponent
-]
+  UploadingAreaComponent,
+];
 @NgModule({
-  declarations: [
-    AppComponent,
-    ...components,
-    ...directive,
-    ...pipes,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ...components, ...directive, ...pipes],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [UploadService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
