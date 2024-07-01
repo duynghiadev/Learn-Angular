@@ -1,0 +1,13 @@
+<p>binding works!</p>
+<br />
+{{ name }}
+
+<!-- {{ expression }} -->
+<p>{{ user.age }}</p>
+<p>{{ user.name }}</p>
+
+<input type="text" [value]="user.name" />
+
+<button type="button" (click)="handler($event)">Click me</button>
+
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
